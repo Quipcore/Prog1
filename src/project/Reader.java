@@ -4,37 +4,43 @@ package project;
 //Felix Lidö feli8145
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Reader {
 
-    private static Scanner input;
-    private final InputStream inStream;
 
-    public Reader(InputStream inStream) {
+    private static List<InputStream> currentInStreams = new ArrayList<>();
+    private final Scanner input;
 
-        this.inStream = inStream;
+
+    public Reader(InputStream inStream) throws IllegalStateException {
+        if(currentInStreams.contains(inStream)){
+            throw new IllegalStateException("Instance of class already exists");
+        }
+
+        currentInStreams.add(inStream);
+        input = new Scanner(inStream);
     }
 
     public Reader(){
-        this.inStream = System.in;
+        currentInStreams.add(System.in);
+        input = new Scanner(System.in);
     }
 
     public int readInt(String text){
         print(text);
-        input = new Scanner(inStream);
         return Integer.parseInt(input.nextLine());
     }
 
     public String readString(String text){
         print(text);
-        input = new Scanner(inStream);
         return input.nextLine();
     }
 
     public double readDouble(String text){
         print(text);
-        input = new Scanner(inStream);
         return Double.parseDouble(input.nextLine().replace(",", "."));
     }
 
@@ -42,4 +48,3 @@ public class Reader {
         System.out.print(text + "?>");
     }
 }
-
