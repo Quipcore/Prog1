@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Dog {
 
-    private static final double DACHS_HUND_TAIL_LENGTH = 3.7;
+    private static final double DACHSHUND_TAIL_LENGTH = 3.7;
 
     private final ArrayList<String> dachshundLangList =
             new ArrayList<>(Arrays.asList("tax","dachs","mäyräkoira","teckel"));
@@ -47,7 +47,7 @@ public class Dog {
 
     private void increaseTail(){
         if(dachshundLangList.contains(breed.toLowerCase())){
-            this.tailLength = DACHS_HUND_TAIL_LENGTH;
+            this.tailLength = DACHSHUND_TAIL_LENGTH;
 
         }else{
             this.tailLength = age*weight/10d;
