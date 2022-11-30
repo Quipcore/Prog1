@@ -24,6 +24,7 @@ public class nameSwapTest {
         }
     }
 
+    //------------------------------------------------------------------------------
 
     public static int sort(){
 
@@ -40,7 +41,8 @@ public class nameSwapTest {
         return swapAmount;
     }
 
-    //Problemet ligger här!!!
+    //------------------------------------------------------------------------------
+    
     private static int findSmallest(int startIndex){
         int retIndex = -1;
         double minTail = Integer.MAX_VALUE;
@@ -62,6 +64,8 @@ public class nameSwapTest {
 
     }
 
+    //------------------------------------------------------------------------------
+    
     /**
      * Returns 1 if swap is made otherwise returns 0.
      * @param i
