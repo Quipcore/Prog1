@@ -1,4 +1,4 @@
-package u1;
+package assignments.practise.u1;
 
 public class cipher {
 

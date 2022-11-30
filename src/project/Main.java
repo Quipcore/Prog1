@@ -1,8 +1,14 @@
 package project;
 
 public class Main {
-    public static void main(String[] args) {
-        Dog tyra = new Dog("Tyra","Working golden retriever",3,20);
+
+
+    int x;
+    public static void main(String[] args) throws Exception {
+
+        if("Hello".equals("Hello")){
+            System.out.println("Hello");
+        }
 
    }
 }

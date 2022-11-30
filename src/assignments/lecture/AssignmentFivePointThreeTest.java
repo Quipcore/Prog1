@@ -1,4 +1,4 @@
-package f5;
+package assignments.lecture;
 
 
 import static org.junit.jupiter.api.Assertions.*;

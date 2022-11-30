@@ -2,24 +2,19 @@ package project;
 //Felix Lidö feli8145
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Dog {
 
     private static final double DACHS_HUND_TAIL_LENGTH = 3.7;
 
-    private ArrayList<String> dachshundLangArr = new ArrayList<>() {
-        {
-            add("tax");
-            add("dachshund");
-            add("mäyräkoira");
-            add("teckel");
-        }
-    };
+    private final ArrayList<String> dachshundLangList =
+            new ArrayList<>(Arrays.asList("tax","dachs","mäyräkoira","teckel"));
 
-    private String name;
-    private String breed;
+    private final String name;
+    private final String breed;
     private int age;
-    private int weight;
+    private final int weight;
     private double tailLength;
 
 
@@ -51,7 +46,7 @@ public class Dog {
     }
 
     private void increaseTail(){
-        if(dachshundLangArr.contains(breed.toLowerCase())){
+        if(dachshundLangList.contains(breed.toLowerCase())){
             this.tailLength = DACHS_HUND_TAIL_LENGTH;
 
         }else{
