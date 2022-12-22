@@ -1,4 +1,4 @@
-package project;
+package assignments.exercises.u8_6;
 
 //Felix Lidö feli8145
 

@@ -1,4 +1,4 @@
-package project;
+package assignments.exercises.u8_4;
 
 // Felix Lidö feli8145
 
@@ -99,14 +99,4 @@ public class Dog {
         return hasOwner;
     }
 
-    public void removeOwner(){
-        hasOwner = false;
-        if(owner == null){
-            return;
-        }
-
-        owner.removeDog(this);
-
-        owner = null;
-    }
 }

@@ -1,4 +1,5 @@
-package project;
+package assignments.lecture.u8_3;
+
 
 //Felix Lidö feli8145
 
@@ -35,11 +36,7 @@ public class Reader {
 
     public String readString(String text){
         print(text);
-        String retString = "";
-        if(input.hasNextLine()){
-            retString  = input.nextLine();
-        }
-        return retString;
+        return input.nextLine();
     }
 
     public double readDouble(String text){

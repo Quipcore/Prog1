@@ -1,4 +1,4 @@
-package project;
+package assignments.exercises.u8_8;
 
 // Felix Lidö feli8145
 public class DogList {

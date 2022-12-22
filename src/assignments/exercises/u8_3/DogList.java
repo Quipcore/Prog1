@@ -1,4 +1,4 @@
-package project;
+package assignments.exercises.u8_3;
 
 // Felix Lidö feli8145
 public class DogList {
@@ -92,17 +92,6 @@ public class DogList {
 
     public int size() {
         return dogArray.length;
-    }
-
-    /** returns the name of all the dogs in list*/
-    public String toString(){
-        /* USE STRING BUILDER*/
-        StringBuilder strBuild = new StringBuilder();
-        for(Dog dog : dogArray){
-            strBuild.append(dog.getName());
-        }
-
-        return strBuild.toString();
     }
 
 }

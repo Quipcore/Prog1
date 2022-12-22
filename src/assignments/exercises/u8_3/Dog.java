@@ -1,4 +1,4 @@
-package project;
+package assignments.exercises.u8_3;
 
 // Felix Lidö feli8145
 
@@ -66,21 +66,11 @@ public class Dog {
     }
 
     public String toString() {
-        String str = name + ", "
-                + breed + ", "
-                + age + " years, "
-                + weight + " kilo, "
-                + tailLength + " cm tail";
-
-        if (hasOwner) {
-            str += ", owned by " + owner.getName();
-        }
-
-        return str;
+        return name + ", " + breed + ", " + age + " years, " + weight + " kilo, " + tailLength + " cm tail";
     }
 
     public void setOwner(Owner owner) {
-        if (owner == null || this.owner != null) {
+        if(owner == null || this.owner != null){
             return;
         }
 
@@ -90,7 +80,7 @@ public class Dog {
 
     }
 
-    public Owner getOwner() {
+    public Owner getOwner(){
         return owner;
     }
 
@@ -99,14 +89,4 @@ public class Dog {
         return hasOwner;
     }
 
-    public void removeOwner(){
-        hasOwner = false;
-        if(owner == null){
-            return;
-        }
-
-        owner.removeDog(this);
-
-        owner = null;
-    }
 }

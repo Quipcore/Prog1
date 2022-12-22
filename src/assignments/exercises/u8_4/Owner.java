@@ -1,4 +1,4 @@
-package project;
+package assignments.exercises.u8_4;
 
 // Felix Lidö feli8145
 
@@ -44,15 +44,4 @@ public class Owner {
     public DogList getDogList(){
         return ownedDogs;
     }
-
-
-    public void removeDog(Dog dog){
-        if(dog.getOwner() != this){
-            return;
-        }
-        ownedDogs.remove(dog);
-        if(dog.hasOwner()){
-            dog.removeOwner();
-        }
-   }
 }
