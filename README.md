@@ -1,1 +1,1 @@
-# SU_prog1
+# Prog1
