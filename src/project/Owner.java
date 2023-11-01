@@ -1,5 +1,4 @@
 package project;
-
 // Felix Lidö feli8145
 
 public class Owner {
@@ -37,14 +36,9 @@ public class Owner {
 
     }
 
-    public boolean hasDog(Dog dog) {
+    public boolean ownsDog(Dog dog) {
         return ownedDogs.contains(dog);
     }
-
-    public DogList getDogList(){
-        return ownedDogs;
-    }
-
 
     public void removeDog(Dog dog){
         if(dog.getOwner() != this){
@@ -54,5 +48,5 @@ public class Owner {
         if(dog.hasOwner()){
             dog.removeOwner();
         }
-   }
+    }
 }

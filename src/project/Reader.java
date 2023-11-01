@@ -1,6 +1,4 @@
-package project;
-
-//Felix Lidö feli8145
+package project;//Felix Lidö feli8145
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -24,12 +22,11 @@ public class Reader {
     }
 
     public Reader(){
-        currentInStreams.add(System.in);
-        input = new Scanner(System.in);
+        this(System.in);
     }
 
-    public int readInt(String text){
-        print(text);
+    public int readInt(String prompt){
+        print(prompt);
         return Integer.parseInt(input.nextLine());
     }
 

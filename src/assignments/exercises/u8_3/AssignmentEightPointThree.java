@@ -40,14 +40,13 @@ public class AssignmentEightPointThree {
     }
 
     private String getString(String prompt) {
-        String retString = "";
-        while(retString.length() == 0){
-            retString = reader.readString(prompt).trim();
-            if(retString.length() == 0){
-                System.out.println("ERROR");
+        while(true){
+            String retString = reader.readString(prompt).trim();
+            if(retString.length() > 0){
+                return retString;
             }
+            System.out.println("ERROR");
         }
-        return retString;
     }
 
 

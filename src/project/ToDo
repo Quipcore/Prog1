@@ -1,0 +1,6 @@
+1. Ägarklassen har en metod som ger tillgång till listan med ägarens hundar.
+        Detta bryter mot ett krav i U8.3 (se sid. 3), och möjliggör att bryta relationen mellan hund och ägare, något som inte får hända.
+
+2. Kolla igenom get/set/indexOf/getIndex osv i hundlista
+
+3. Statiska objekt - FIXED!!!!!!

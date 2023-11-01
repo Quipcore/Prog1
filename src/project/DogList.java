@@ -1,6 +1,6 @@
 package project;
-
 // Felix Lidö feli8145
+
 public class DogList {
 
     private Dog[] dogArray;
@@ -9,15 +9,11 @@ public class DogList {
         dogArray = new Dog[0];
     }
 
-    public boolean exists() {
-        return dogArray.length != 0;
-    }
-
 
     //--------------------------------------------------------------------------
 
     public void add(Dog dog) {
-        if (contains(dog)) {
+        if (contains(dog) || dog == null) {
             return;
         }
         increaseArraySize();
@@ -52,7 +48,7 @@ public class DogList {
             return;
         }
 
-        int index = getIndex(dog);
+        int index = indexOf(dog);
 
         for (int i = index; i < dogArray.length - 1; i++) {
             dogArray[i] = dogArray[i + 1];
@@ -62,7 +58,7 @@ public class DogList {
 
     }
 
-    private int getIndex(Dog dog) {
+    private int indexOf(Dog dog) {
         for (int i = 0; i < dogArray.length; i++) {
             if (dogArray[i].equals(dog)) {
                 return i;
@@ -86,23 +82,19 @@ public class DogList {
         return dogArray[index];
     }
 
-    public void set(int index, Dog dog) {
-        dogArray[index] = dog;
-    }
-
     public int size() {
         return dogArray.length;
     }
 
-    /** returns the name of all the dogs in list*/
-    public String toString(){
-        /* USE STRING BUILDER*/
+    @Override
+    public String toString() {
         StringBuilder strBuild = new StringBuilder();
-        for(Dog dog : dogArray){
-            strBuild.append(dog.getName());
+        for(int i = 0; i < dogArray.length; i++){
+            strBuild.append(dogArray[i].getName());
+            if(i != dogArray.length -1){
+                strBuild.append(", ");
+            }
         }
-
         return strBuild.toString();
     }
-
 }
